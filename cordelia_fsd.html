@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cordelia's Cafe - Specialty Cakes</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #ff6f61;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header h1 {
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        #slideshow {
+            position: relative;
+            max-width: 60%;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .slides {
+            display: none;
+            width: 100%;
+            border-radius: 10px;
+        }
+        .active {
+            display: block;
+        }
+        .caption {
+            position: absolute;
+            bottom: 8px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            text-align: center;
+            width: 100%;
+            padding: 10px;
+            font-size: 1.1rem;
+            border-radius: 0 0 10px 10px;
+        }
+
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 2rem;
+            color: #ff6f61;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #ff6f61;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #d35400;
+        }
+
+      
+        figure {
+            margin: 0 auto;
+            display: inline-block;
+        }
+        figcaption {
+            font-size: 1rem;
+            font-style: italic;
+            margin-top: 10px;
+            color: #777;
+        }
+
+      
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #ff6f61;
+            color: white;
+            font-size: 1.1rem;
+        }
+        td {
+            background-color: #f9f9f9;
+        }
+        tr:nth-child(even) td {
+            background-color: #f2f2f2;
+        }
+        td[colspan] {
+            background-color: #ff6f61;
+            color: white;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #ff6f61;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+        input[type="submit"]:hover {
+            background-color: #d35400;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        ul, ol, dl {
+            text-align: left;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
+<header>
+    <h1>Cordelia's Cafe</h1>
+    <p>Specialty Cakes that melt your heart.</p>
+</header>
+
+
+<section id="slideshow">
+    <div class="slides active">
+        <img src="cake1.jpg" alt="Specialty Cake 1" style="width:100%; border-radius: 10px;">
+        <div class="caption">Delicious Red Velvet Cake</div>
+    </div>
+    <div class="slides">
+        <img src="cake2.jpg" alt="Specialty Cake 2" style="width:100%; border-radius: 10px;">
+        <div class="caption">Tasty Chocolate Truffle Cake</div>
+    </div>
+    <div class="slides">
+        <img src="cake3.jpg" alt="Specialty Cake 3" style="width:100%; border-radius: 10px;">
+        <div class="caption">Fresh Fruit Cake</div>
+    </div>
+</section>
+
+<section>
+    <h2>About Cordelia's Cafe</h2>
+    <p>At <strong>Cordelia's Cafe</strong>, we specialize in creating mouth-watering cakes made with only the finest ingredients. Whether you are craving a rich chocolate truffle or a classic red velvet, our cakes are sure to delight your taste buds!</p>
+    <p><em>We bake with love and passion to ensure every cake is a masterpiece!</em></p>
+    <p>Visit us and experience the magic of our <mark>specialty cakes</mark> that will surely satisfy your sweet cravings.</p>
+</section>
+
+<section>
+    <figure>
+        <img src="cordelias_cafe.jpg" alt="Cordelia's Cafe" usemap="#shopmap" style="width: 100%; max-width: 600px; border-radius: 10px;">
+        <figcaption>Visit Cordelia's Cafe - A delightful experience!</figcaption>
+    </figure>
+
+    <map name="shopmap">
+        <area shape="rect" coords="0,0,200,200" href="about.html" alt="About Us">
+        <area shape="circle" coords="300,200,50" href="menu.html" alt="Our Menu">
+        <area shape="poly" coords="100,100,150,150,200,50" href="contact.html" alt="Contact Us">
+    </map>
+</section>
+
+<section>
+    <h2>Our Specialty Cakes</h2>
+    <ul>
+        <li><strong>Red Velvet Cake</strong></li>
+        <li><strong>Chocolate Truffle Cake</strong></li>
+        <li><strong>Fresh Fruit Cake</strong></li>
+    </ul>
+
+    
+
+    <h3>Types of Cakes We Offer:</h3>
+    <dl>
+        <dt>Red Velvet</dt>
+        <dd>Classic cake with cream cheese frosting.</dd>
+        <dt>Chocolate Truffle</dt>
+        <dd>Rich chocolate cake with truffle filling.</dd>
+    </dl>
+</section>
+
+
+<section>
+    
+    <p>At <strong>Cordelia's Cafe</strong>, we offer the best in <em>specialty cakes</em>. From <mark>Red Velvet</mark> to <mark>Chocolate Truffle</mark>, every bite is a treat.</p>
+    <p><abbr title="Specialty Cakes">SC</abbr> are baked fresh daily!</p>
+</section>
+
+<section>
+    <h2>Explore Our Website</h2>
+    <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</section>
+<section>
+    <h2>Order Summary</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Cake</th>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th colspan="2">Price (₹)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Red Velvet</td>
+                <td>Classic red velvet cake with cream cheese frosting</td>
+                <td>1</td>
+                <td colspan="2">₹2,500</td>
+            </tr>
+            <tr>
+                <td>Chocolate Truffle</td>
+                <td>Rich chocolate truffle with ganache topping</td>
+                <td>2</td>
+                <td>₹1,800</td>
+                <td rowspan="2">Total: ₹3,600</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+<!-- Order Form Section -->
+<section>
+    <h2>Order Form</h2>
+    <form action="/submit-order" method="POST">
+        <label for="cake">Choose your cake:</label>
+        <select id="cake" name="cake">
+            <option value="red_velvet">Red Velvet</option>
+            <option value="chocolate_truffle">Chocolate Truffle</option>
+            <option value="fruit_cake">Fruit Cake</option>
+        </select>
+        <br><br>
+
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <br><br>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="10" required>
+        <br><br>
+
+        <label for="address">Shipping Address:</label>
+        <textarea id="address" name="address" rows="4" required></textarea>
+        <br><br>
+
+        <input type="submit" value="Submit Order">
+    </form>
+</section>
+<center>
+<aside>
+    <h2>Experience Our Cakes in Action!</h2>
+    <video controls>
+        <source src="cakes_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</aside>
+</center>
+
+
+<footer>
+    <p>&copy; 2024 Cordelia's Cafe. All Rights Reserved.</p>
+</footer>
+
+
+<script>
+    let slideIndex = 0;
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("slides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); 
+    }
+
+    showSlides();
+</script>
+
+</body>
+</html>
