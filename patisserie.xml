@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<patisserie xmlns="http://www.cordeliascafe.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cordeliascafe.com patisserie.xsd">
+    <cakes>
+        <cake>
+            <name>Classic Vanilla</name>
+            <price>999</price>
+            <weight unit="kg">1.5</weight>
+            <isAvailable>true</isAvailable>
+        </cake>
+        <cake>
+            <name>Chocolate Truffle</name>
+            <price>2550</price>
+            <weight unit="kg">2.0</weight>
+            <isAvailable>false</isAvailable>
+        </cake>
+    </cakes>
+</patisserie>

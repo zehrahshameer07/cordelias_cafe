@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Royal Red Velvet",
+    "category": "Wedding",
+    "price": 1500,
+    "rating": 4.8,
+    "flavor": "Chocolate & Cream Cheese"
+  },
+  {
+    "name": "Classic Vanilla Bliss",
+    "category": "Birthday",
+    "price": 1200,
+    "rating": 4.6,
+    "flavor": "Vanilla & Buttercream"
+  },
+  {
+    "name": "Dark Chocolate Truffle",
+    "category": "Anniversary",
+    "price": 1800,
+    "rating": 4.9,
+    "flavor": "Chocolate Ganache"
+  },
+  {
+    "name": "Lemon Zest Delight",
+    "category": "Casual",
+    "price": 1000,
+    "rating": 4.5,
+    "flavor": "Lemon & Cream"
+  }
+]

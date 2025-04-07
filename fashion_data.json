@@ -1,0 +1,34 @@
+{
+  "fashionItems": [
+    {
+      "name": "Leather Jacket",
+      "brand": "Zara",
+      "price": 4500,
+      "category": "Jackets"
+    },
+    {
+      "name": "Denim Jeans",
+      "brand": "Levi's",
+      "price": 2500,
+      "category": "Jeans"
+    },
+    {
+      "name": "Summer Dress",
+      "brand": "H&M",
+      "price": 3200,
+      "category": "Dresses"
+    },
+    {
+      "name": "Sneakers",
+      "brand": "Nike",
+      "price": 5600,
+      "category": "Shoes"
+    },
+    {
+      "name": "Casual Shirt",
+      "brand": "Uniqlo",
+      "price": 1900,
+      "category": "Shirts"
+    }
+  ]
+}

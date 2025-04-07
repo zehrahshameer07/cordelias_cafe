@@ -1,108 +1,135 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>chocolates </title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<body background="background2.png" style="background-size: cover;
- background-repeat: no-repeat">
-<style>
-.header {
-  background-color: #fad6ed;
-  padding: 8px;
-  text-align: center;
-}
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 17px 20px;
-  text-decoration: none;
-}
-.topnav a:hover {
-  background-color: #fad6ed;
-  color: black;
-}
-
-a:link{
- color:white;
-}
-a:visited{
- color:white ;
-}
-a:hover{
- color:white;
-}
-a:active{
- color:#d24eef ;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolates | Cordelia's Café</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f9ecff;
+            text-align: center;
+            color: #6a1b9a;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background: #e9c7ff;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #4a148c;
+            font-size: 20px;
+            margin: 15px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+        }
+        h1 {
+            font-size: 50px;
+            font-family: 'Playfair Display', serif;
+            margin-top: 20px;
+        }
+        .chocolate-container {
+            width: 80%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+        }
+        .chocolate-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        .chocolate-item img {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .chocolate-info {
+            flex-grow: 1;
+            text-align: left;
+        }
+        button {
+            background-color: #b388eb;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #9c4dcc;
+        }
+        .cart {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #e9c7ff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px gray;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
 </head>
-<body>
-<div class="header">
-  <h1>CORDELIA'S CAFE</h1>
-</div>
-<marquee>the home of freshly baked dessesrts and chocolates made from handpicked ingredients</marquee>
-<align="left">
-<div class="topnav" style="font-size:25px;">
-  <a href="cordelia's.html">home</a>
-  <a href="chocolates.html">chocolates</a>
-  <a href="celebration cakes.html">celebration cakes</a>
-<a href="hampers.html">hampers</a>
+<body ng-app="chocoApp" ng-controller="ChocoController">
 
-</div>
+    <div class="navbar">
+        <a href="cordelia's.html">Home</a>
+        <a href="chocolates.html">Chocolates</a>
+        <a href="signaturecakes.html">Cakes</a>
+        <a href="hampers.html">Hampers</a>
+    </div>
 
+    <h1>Welcome to Cordelia's</h1>
+    <h2 style="color: #8e24aa; font-size: 40px;">Chocolates</h2>
 
-<br></br>
-`<div> 
-<center>
-<H1 style="font-size:50px;"><b><u>CHOCOLATES</b></u></H1>
-</center>
-<center>
-<img src="chocolates2.jpg" width="1300" height="700" >
-</center>
-<br> </br>
-<ul><b><font size="6">Different types of chocolate to choose from
-<li><b><font size="5">Assorted chocolates</b></li>
-<li><b><font size="5">Speciality dark chocolate</b></li>
-<li><b><font size="5">Speciality milk chocolate</b></li>
-<li><b><font size="5">Speciality white chocolate</b></li>
-<li><b><font size="5">Premium chocolate</b></li>
-</ul>
-<p><a href="cordelia's.html"> home</a></p>
-<br> </br>
-<hr width="100%" size="2" color="#fe5cd2 " noshade>
-<table align=center width="80%"  height="40%"  style="background-color:#dfc6e2; border:20 px solid; font-size:30px;">
-<tr style="background-color: #fad6ed;">
-<th>My Account</th>
-<th>Quick Links</th>
-<th>Discover</th>
-</tr>
-<tr>
-<td><a href="myaccount.html"> My Account</a></td>
-<td>FAQs</td>
-<td>About us</td>
-</tr>
-<tr>
-<td>Order History</td>
-<td>Terms and conditions</td>
-<td>Careers</td>
-</tr>
-<tr>
-<td>Delivery Information</td>
-<td>Privacy Policy</td>
-<td>Contact us</td>
-</tr>
-</table>
-<dl>
-<dt align=center style = "font-size:30px;"> CORDELIA'S CAFE</dt>
-<dd align=center style = "font-size:20px;">Dont forget to follow us on instagram!</dd>
-</dl>
-<iframe src="myaccount.html" title="tables" height="600" width="1000" style="border:none;margin:20px;padding:100px; overflow: hidden;">
-</iframe>
+    <div class="chocolate-container">
+        <div class="chocolate-item" ng-repeat="choco in chocolates">
+            <img ng-src="{{ choco.image }}" alt="{{ choco.name }}">
+            <div class="chocolate-info">
+                <h3>{{ choco.name }}</h3>
+                <p>Price: ₹{{ choco.price }}</p>
+            </div>
+            <button ng-click="addToCart(choco)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="cart">
+        🛒 Cart: {{ cart.length }} items
+    </div>
+
+    <script>
+        var app = angular.module("chocoApp", []);
+
+        app.controller("ChocoController", function($scope) {
+            $scope.chocolates = [
+                { name: "Assorted Chocolates", price: 499, image: "assorted_chocolate.jpg" },
+                { name: "Specialty Dark Chocolate", price: 599, image: "dark_chocolate.jpg" },
+                { name: "Specialty Milk Chocolate", price: 549, image: "milk_chocolate.jpg" },
+                { name: "Specialty White Chocolate", price: 569, image: "white_chocolate.jpg" },
+                { name: "Premium Chocolate", price: 699, image: "premium_chocolate.jpg" }
+            ];
+
+            $scope.cart = [];
+
+            $scope.addToCart = function(choco) {
+                $scope.cart.push(choco);
+            };
+        });
+    </script>
 
 </body>
 </html>

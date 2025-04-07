@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<patisserie xmlns="http://www.cordeliascafe.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cordeliascafe.com patisserie.xsd">
+    <cakes>
+        <cake>
+            <name>Classic Vanilla</name>
+            <price>2099</price>
+            <weight unit="kg">1.5</weight>
+            <isAvailable>true</isAvailable>
+        </cake>
+        <cake>
+            <name>Chocolate Truffle</name>
+            <price>2550</price>
+            <weight unit="kg">2.0</weight>
+            <isAvailable>false</isAvailable>
+        </cake>
+        <cake>
+            <name>Red Velvet</name>
+            <price>3000</price>
+            <weight unit="kg">1.8</weight>
+            <isAvailable>true</isAvailable>
+        </cake>
+        <cake>
+            <name>Strawberry Cheesecake</name>
+            <price>2850</price>
+            <weight unit="kg">2.2</weight>
+            <isAvailable>true</isAvailable>
+        </cake>
+        <cake>
+            <name>Lemon Drizzle</name>
+            <price>1875</price>
+            <weight unit="kg">1.2</weight>
+            <isAvailable>true</isAvailable>
+        </cake>
+    </cakes>
+    <orders>
+        <order>
+            <orderId>101</orderId>
+            <customerName>Sarah</customerName>
+            <cakeName>Classic Vanilla</cakeName>
+            <quantity>2</quantity>
+            <totalPrice>4198</totalPrice>
+            <status>Delivered</status>
+        </order>
+        <order>
+            <orderId>102</orderId>
+            <customerName>John</customerName>
+            <cakeName>Red Velvet</cakeName>
+            <quantity>1</quantity>
+            <totalPrice>3000</totalPrice>
+            <status>In Progress</status>
+        </order>
+        <order>
+            <orderId>103</orderId>
+            <customerName>Shreya</customerName>
+            <cakeName>Strawberry Cheesecake</cakeName>
+            <quantity>3</quantity>
+            <totalPrice>8550</totalPrice>
+            <status>Delivered</status>
+        </order>
+    </orders>
+    <customers>
+        <customer>
+            <name>Sarah</name>
+            <email>sarah@gmail.com</email>
+            <phone>9234567890</phone>
+            <address>123 Street, Bangalore</address>
+        </customer>
+        <customer>
+            <name>John </name>
+            <email>john@gmail.com</email>
+            <phone>987654321</phone>
+            <address>456 Avenue, Metropolis</address>
+        </customer>
+        <customer>
+            <name>Shreya</name>
+            <email>shreya@gmail.com</email>
+            <phone>8122334455</phone>
+            <address>789 Street, Mumbai</address>
+        </customer>
+    </customers>
+</patisserie>

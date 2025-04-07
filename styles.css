@@ -1,0 +1,110 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #F8E8EE;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+nav {
+    background: #8E24AA;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 25%;
+    padding: 20px;
+    background: #E1BEE7;
+    position: fixed;
+    left: 0;
+    top: 60px;
+    height: 100%;
+}
+
+.sidebar h2, .sidebar h3 {
+    color: #6A1B9A;
+}
+
+.home-button {
+    display: block;
+    background: #AB47BC;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Workshops */
+.container {
+    display: flex;
+    margin-left: 30%;
+    flex-wrap: wrap;
+}
+
+.workshop-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 15px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.workshop-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.signup-button {
+    background: #6A1B9A;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signup-button:hover {
+    background: #AB47BC;
+}
+
+/* Contact Form */
+#contact {
+    text-align: center;
+    padding: 20px;
+    background: #F3E5F5;
+}
+
+#contact form {
+    background: white;
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+    border-radius: 10px;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cakeApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cordelia's Café - Cake List</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3e5f5; 
+            text-align: center;
+            color: #4a148c; 
+        }
+        .cake-container {
+            width: 50%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px #7b1fa2; 
+        }
+        .cake-item {
+            padding: 10px;
+            border-bottom: 1px solid #d1c4e9; 
+        }
+        .highlight {
+            background-color: #e1bee7;
+            transition: 0.3s;
+        }
+        input, select {
+            padding: 8px;
+            margin: 10px;
+            border: 1px solid #7b1fa2;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #7b1fa2; 
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #6a1b9a; 
+        }
+    </style>
+</head>
+<body ng-controller="CakeController">
+
+    <div class="cake-container">
+        <h1>Cordelia's Café Cake Collection</h1>
+        <input type="text" ng-model="searchCake" placeholder="Search Cakes" ng-focus="onFocus()" ng-blur="onBlur()">
+
+        <select ng-model="filterCategory">
+            <option value="">All Categories</option>
+            <option value="Wedding">Wedding</option>
+            <option value="Birthday">Birthday</option>
+            <option value="Anniversary">Anniversary</option>
+            <option value="Casual">Casual</option>
+        </select>
+
+        <div class="cake-item" ng-repeat="cake in cakes | filter:searchCake | filter:{category:filterCategory} | orderBy:'-rating'" 
+             ng-mouseover="highlight($index)" 
+             ng-mouseleave="removeHighlight($index)" 
+             ng-class="{'highlight': cake.highlighted}">
+
+            <h3>{{cake.name}}</h3>
+            <p>Category: {{cake.category}}</p>
+            <p>Flavor: {{cake.flavor}}</p>
+            <p>Price: ₹{{cake.price}}</p>
+            <p>Rating: {{cake.rating}}</p>
+            <button ng-click="removeCake($index)">Remove</button>
+        </div>
+    </div>
+
+    <script>
+        var app = angular.module("cakeApp", []);
+        
+        app.controller("CakeController", function($scope, $http) {
+            $http.get("cakes.json").then(function(response) {
+                $scope.cakes = response.data;
+            });
+
+    
+            $scope.removeCake = function(index) {
+                $scope.cakes.splice(index, 1);
+            };
+
+            
+            $scope.highlight = function(index) {
+                $scope.cakes[index].highlighted = true;
+            };
+
+            $scope.removeHighlight = function(index) {
+                $scope.cakes[index].highlighted = false;
+            };
+
+          
+            $scope.onFocus = function() {
+                console.log("Search box focused!");
+            };
+
+            $scope.onBlur = function() {
+                console.log("Search box lost focus!");
+            };
+        });
+    </script>
+
+</body>
+</html>

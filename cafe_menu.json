@@ -1,0 +1,28 @@
+{
+    "menuItems": [
+        {
+            "name": "Chocolate Truffle Cake",
+            "category": "Cakes",
+            "price": 450,
+            "ingredients": "Chocolate, Cream, Sugar, Flour"
+        },
+        {
+            "name": "Strawberry Cheesecake",
+            "category": "Cakes",
+            "price": 500,
+            "ingredients": "Strawberries, Cream Cheese, Sugar, Biscuit Base"
+        },
+        {
+            "name": "Espresso Coffee",
+            "category": "Beverages",
+            "price": 150,
+            "ingredients": "Espresso Beans, Water, Sugar"
+        },
+        {
+            "name": "Iced Caramel Latte",
+            "category": "Beverages",
+            "price": 200,
+            "ingredients": "Coffee, Milk, Caramel Syrup, Ice"
+        }
+    ]
+}

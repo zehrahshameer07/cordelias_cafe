@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           targetNamespace="http://www.cordeliascafe.com" 
+           xmlns="http://www.cordeliascafe.com" 
+           elementFormDefault="qualified">
+
+    <xs:element name="patisserie">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cakes">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="cake" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="name" type="xs:string"/>
+                                        <xs:element name="price" type="xs:decimal"/>
+                                        <xs:element name="weight">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:decimal">
+                                                        <xs:attribute name="unit" type="xs:string" use="required"/>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="isAvailable" type="xs:boolean"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="orders">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="order" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="orderId" type="xs:integer"/>
+                                        <xs:element name="customerName" type="xs:string"/>
+                                        <xs:element name="cakeName" type="xs:string"/>
+                                        <xs:element name="quantity" type="xs:integer"/>
+                                        <xs:element name="totalPrice" type="xs:decimal"/>
+                                        <xs:element name="status" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="customers">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="customer" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="name" type="xs:string"/>
+                                        <xs:element name="email" type="xs:string"/>
+                                        <xs:element name="phone" type="xs:string"/>
+                                        <xs:element name="address" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
